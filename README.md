@@ -11,6 +11,8 @@ API REST Cliente com Endereço
 ## Estrutura de dados
 ![](/src/main/resources/DER-cliente-api.png)
 
+(DER gerado por app.dbdesigner.net) 
+
 Script de criação: [script_create_database.sql](https://github.com/michelmdes/cliente-api/blob/master/src/main/resources/docker-postgres/script_create_database.sql)
 
 Foi criado uma imagem docker da base de dados com a estrutura do banco, bem como uma carga inicial das tabelas auxiliares (gênero, cidade e estado).
