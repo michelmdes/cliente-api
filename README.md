@@ -1,6 +1,6 @@
 # MVP Cliente - API REST
 
-API REST Cliente
+API REST Cliente com Endereço
 
 ## Tecnologias
  - SpringBoot 2.4.2
@@ -8,23 +8,25 @@ API REST Cliente
  - Swagger 2.9.2
  - Testes unitários com JUnit, Mockito e Powermock
  
-## Estrutura
+## Estrutura de dados
 ![](/src/main/resources/DER-cliente-api.png)
 
-Script de criação: resources/postgres/script_create_database.sql
+Script de criação: [script_create_database.sql](https://github.com/michelmdes/cliente-api/blob/master/src/main/resources/docker-postgres/script_create_database.sql)
 
-Foi criado uma imagem docker da base de dados com a estrutura do banco, bem como uma carga inicial de gênero, cidade e estado.
+Foi criado uma imagem docker da base de dados com a estrutura do banco, bem como uma carga inicial das tabelas auxiliares (gênero, cidade e estado).
 
-Imagem: michelmdes/cliente-api-db-pgsql
+Imagem docker da base de dados no Docker Hub: michelmdes/cliente-api-db-pgsql
 
-Para alteração da estrutura, executar o script build-db.sh para atualizar a imagem docker do banco.
+Para alteração da estrutura da base dentro da imagem docker, executar o script [build-db.sh](https://github.com/michelmdes/cliente-api/blob/master/src/main/resources/docker-postgres/build-db.sh).
 
 ## Iniciar aplicação
 
 Na raiz do projeto, rodar o comando: 
 `docker-compose up`
 
-O Docker Compose (orquestrador de container) irá baixar as imagens e iniciá-las automaticamente.
+O Docker Compose (orquestrador de container) irá baixar as imagens (api e banco) e iniciá-las automaticamente.
+
+Essa aplicação também está hospedada no Heroku, através do link: Link Heroku: https://cliente-ws-api.herokuapp.com/swagger-ui.html
 
 ## Deploy
 
@@ -41,28 +43,30 @@ A documentação dos endpoints é gerada automaticamente através do Swagger, co
  
 Link: [ApplicationPath]/swagger-ui.html
 
-Link Heroku: https://bp-cliente.herokuapp.com/swagger-ui.html#/cliente-resource
+Link Heroku: https://cliente-ws-api.herokuapp.com/swagger-ui.html#/cliente-resource
 
 ![](/src/main/resources/Documentacao_swagger.png)
 
-Arquivo postman com testes para todos os endpoints da API (v 2.1):  
+Arquivo postman (v 2.1) com testes para todos os endpoints da API: [cliente-api.postman_collection.json](https://github.com/michelmdes/cliente-api/blob/master/src/main/resources/cliente-api.postman_collection.json)
 
 ## Processo criativo
  - Gerando aplicação com o spring initializr
- - Definindo o DER, criando a estrutura do banco de dados
+ - Definindo os domínios da api
  - Criando imagem docker do banco postgres, para ser usado pela aplicação
- - Criando as entidades JPA
+ - Definindo o DER, criando a estrutura do banco de dados
+ - Mapeando as entidades JPA
  - Criando os Repositories
- - Criando uma camada genérica Services, que aproveita todos os métodos padrões da JpaReposytory, facilitando a criação dos endpoints
+ - Criando uma camada genérica Services, que aproveita todos os métodos padrões da JpaReposytory, facilitando a criação dos endpoints. (Repare a simplicidade de implementação e abstração dos recursos de Gênero e Estado, por exemplo)
  - Criando os Resouces
  - Configurando o Swagger, plugin que gera documentação da API automaticamente
- - Testando os endpoints da API
- - Criando testes unitários
+ - Testando os endpoints da API (via Swagger e via Postman, ambos disponíveis no tópico acima **Documentação**)
+ - Criando testes unitários (utilizando mokito e PowerMock, esse para testar um método privado via reflexão)
  - Criando imagem docker para a aplicação
- - Criando scripts para gerar e atualizar as imagens docker
+ - Criando scripts para gerar e atualizar a imagem docker da aplicação (Ver tópico **Deploy**)
+ - Criando scripts para gerar e atualizar a imagem docker da base de dados (Ver tópico **Estrutura de dados**)
  - Criando docker-compose para orquestrar os containers e iniciá-los simultaneamente
  - Criando documentação explicativa
- - Hospedando aplicação e banco na nuvem  
+ - Hospedando aplicação e banco na nuvem (Heroku)
 
 ## Autor
 Michel Mendes
