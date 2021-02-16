@@ -1,4 +1,4 @@
-# MVP Cliente - API REST
+# API REST Cliente
 
 API REST Cliente com Endereço
 
@@ -49,7 +49,9 @@ Link Heroku: https://cliente-ws-api.herokuapp.com/swagger-ui.html#/cliente-resou
 
 ![](/src/main/resources/Documentacao_swagger.png)
 
-Arquivo postman (v 2.1) com testes para todos os endpoints da API: [cliente-api.postman_collection.json](https://github.com/michelmdes/cliente-api/blob/master/src/main/resources/cliente-api.postman_collection.json)
+Arquivo postman (v 2.1) com testes para todos os endpoints da API: [cliente-api.postman_collection.json](https://github.com/michelmdes/cliente-api/blob/master/src/main/resources/cliente-api.postman_collection_prod.json)
+
+Arquivo postman (v 2.1) com testes para todos os endpoints da API (localhost): [cliente-api.postman_collection.json](https://github.com/michelmdes/cliente-api/blob/master/src/main/resources/cliente-api.postman_collection_localhost.json)
 
 ## Processo criativo
  - Gerando aplicação Spring Boot com o spring initializr

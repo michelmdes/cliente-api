@@ -1,0 +1,877 @@
+{
+	"info": {
+		"_postman_id": "84620fb6-af4f-419f-9c3d-8644bcfbd6d4",
+		"name": "cliente-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Serviços principais",
+			"item": [
+				{
+					"name": "Cliente",
+					"item": [
+						{
+							"name": "Cliente - Listar todos paginado",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes?orderBy=nome",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									],
+									"query": [
+										{
+											"key": "orderBy",
+											"value": "nome"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente - Listar paginado por filtro (nome, rg, cpf, telefone, email, genero)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/filtro?nome=m&email=michelmdes@gmail.com&telefone=71988716861&genero=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"filtro"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "m"
+										},
+										{
+											"key": "email",
+											"value": "michelmdes@gmail.com"
+										},
+										{
+											"key": "telefone",
+											"value": "71988716861"
+										},
+										{
+											"key": "genero",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente - listar por ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente - Incluir",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"cpf\": \"071.380.980-90\",\n  \"dataNascimento\": \"2011-02-16T02:01:15.722Z\",\n  \"email\": \"teste@teste.com\",\n  \"genero\": {\n    \"id\": 1\n  },\n  \"idade\": 0,\n  \"nome\": \"Cliente Teste\",\n  \"rg\": \"123.456.789\",\n  \"telefone\": \"11987654123\"\n}"
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente - Editar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"cpf\": \"644.659.520-40\",\n  \"dataNascimento\": \"2011-02-16T02:01:15.722Z\",\n  \"email\": \"teste2@teste.com\",\n  \"genero\": {\n    \"id\": 2\n  },\n  \"idade\": 0,\n  \"nome\": \"Cliente Teste 2\",\n  \"rg\": \"123.456.7890\",\n  \"telefone\": \"11987654123\"\n}"
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente - Excluir",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Endereço - listar endereços por ID Cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1/enderecos",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"1",
+										"enderecos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Endereço - inserir endereços de um Cliente",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"logradouro\": \"Rua Teste\",\n    \"numero\": \"4\",\n    \"complemento\": \"Complemento teste\",\n    \"bairro\": \"Bairro teste\",\n    \"cep\": \"06210-111\",\n    \"descricao\": \"Teste\",\n    \"cidade\": {\n        \"id\": 26\n    }\n}"
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1/enderecos",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"1",
+										"enderecos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Endereço - editar endereço de um Cliente",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"logradouro\": \"Rua Teste 2\",\n    \"numero\": \"42\",\n    \"complemento\": \"Complemento teste 2\",\n    \"bairro\": \"Bairro teste 2\",\n    \"cep\": \"06210-222\",\n    \"descricao\": \"Teste Alterado\",\n    \"cidade\": {\n        \"id\": 27\n    }\n}"
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1/enderecos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"1",
+										"enderecos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Endereço - Excluir endereço de um Cliente",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1/enderecos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"1",
+										"enderecos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Serviços suporte",
+			"item": [
+				{
+					"name": "Genero",
+					"item": [
+						{
+							"name": "Genero - Listar todos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/generos",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"generos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Genero - Listar por Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/generos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"generos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Genero - Incluir novo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Prefiro não informar\"\n}"
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/generos",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"generos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Genero - Editar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Teste\"\n}"
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/generos/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"generos",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Genero - Excluir",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/generos/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"generos",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Estado",
+					"item": [
+						{
+							"name": "Estado - Listar todos paginado",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/estados/filtro?size=30",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"estados",
+										"filtro"
+									],
+									"query": [
+										{
+											"key": "size",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Estado - Listar por ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/estados/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"estados",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Estado - Listar paginado por filtro (nome)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/estados/filtro?nome=a&size=30",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"estados",
+										"filtro"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "a"
+										},
+										{
+											"key": "size",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Estado - Incluir novo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Estado teste 2\",\n  \"sigla\": \"ET\"\n}"
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/estados",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"estados"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Estado - Editar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Teste 2\",\n  \"sigla\": \"T2\"\n}"
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/estados/28",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"estados",
+										"28"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Estado - Excluir",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/estados/28",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"estados",
+										"28"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f0f2aad8-aaa8-4cca-a7f8-653dcb920031",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "4e8c62e9-5a49-4e03-8cf1-c56ea9870dbd",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Cidade",
+					"item": [
+						{
+							"name": "Cidade - Listar todos paginado",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/cidades/filtro?size=30",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cidades",
+										"filtro"
+									],
+									"query": [
+										{
+											"key": "size",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cidade - Listar paginado por filtro (nome)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/cidades/filtro?nome=s&size=30",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cidades",
+										"filtro"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "s"
+										},
+										{
+											"key": "size",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cidade - Listar paginado por filtro (estado)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/cidades/filtro?nome=&idEstado=5&size=30",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cidades",
+										"filtro"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": ""
+										},
+										{
+											"key": "idEstado",
+											"value": "5"
+										},
+										{
+											"key": "size",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cidade - Listar por ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/cidades/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cidades",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cidade - Incluir novo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Cidade teste 2\",\n  \"estado\": {\n        \"id\": 2\n    }\n}"
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/cidades",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cidades"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cidade - Editar",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Teste 223\",\n  \"sigla\": \"T2\",\n  \"estado\": {\n  \t\"id\": 5\n  }\n}"
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/cidades/28",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cidades",
+										"28"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cidade - Excluir",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://cliente-ws-api.herokuapp.com/cidades/28",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cidades",
+										"28"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f0f2aad8-aaa8-4cca-a7f8-653dcb920031",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "4e8c62e9-5a49-4e03-8cf1-c56ea9870dbd",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c1d201a8-f44e-4617-84e5-224647353032",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "dee5abb1-001c-49e2-ac4d-98c0b79b0cb8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
