@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "84620fb6-af4f-419f-9c3d-8644bcfbd6d4",
-		"name": "cliente-api",
+		"_postman_id": "94357e56-567b-4a25-8f40-e70327621aa8",
+		"name": "cliente-api copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -18,10 +18,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/clientes?orderBy=nome",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"clientes"
 									],
@@ -42,10 +44,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/clientes/filtro?nome=m&email=michelmdes@gmail.com&telefone=71988716861&genero=1",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"clientes",
 										"filtro"
@@ -79,10 +83,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"clientes",
 										"1"
@@ -109,10 +115,12 @@
 								},
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/clientes/",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"clientes",
 										""
@@ -138,14 +146,16 @@
 									"raw": "{\n  \"cpf\": \"644.659.520-40\",\n  \"dataNascimento\": \"2011-02-16T02:01:15.722Z\",\n  \"email\": \"teste2@teste.com\",\n  \"genero\": {\n    \"id\": 2\n  },\n  \"idade\": 0,\n  \"nome\": \"Cliente Teste 2\",\n  \"rg\": \"123.456.7890\",\n  \"telefone\": \"11987654123\"\n}"
 								},
 								"url": {
-									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1",
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/2",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"clientes",
-										"1"
+										"2"
 									]
 								}
 							},
@@ -168,14 +178,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1",
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/2",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"clientes",
-										"1"
+										"2"
 									]
 								}
 							},
@@ -187,14 +199,16 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1/enderecos",
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/2/enderecos",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"clientes",
-										"1",
+										"2",
 										"enderecos"
 									]
 								}
@@ -218,14 +232,16 @@
 									"raw": "{\n    \"logradouro\": \"Rua Teste\",\n    \"numero\": \"4\",\n    \"complemento\": \"Complemento teste\",\n    \"bairro\": \"Bairro teste\",\n    \"cep\": \"06210-111\",\n    \"descricao\": \"Teste\",\n    \"cidade\": {\n        \"id\": 26\n    }\n}"
 								},
 								"url": {
-									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1/enderecos",
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/2/enderecos",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"clientes",
-										"1",
+										"2",
 										"enderecos"
 									]
 								}
@@ -249,14 +265,16 @@
 									"raw": "{\n    \"logradouro\": \"Rua Teste 2\",\n    \"numero\": \"42\",\n    \"complemento\": \"Complemento teste 2\",\n    \"bairro\": \"Bairro teste 2\",\n    \"cep\": \"06210-222\",\n    \"descricao\": \"Teste Alterado\",\n    \"cidade\": {\n        \"id\": 27\n    }\n}"
 								},
 								"url": {
-									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1/enderecos/1",
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/2/enderecos/1",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"clientes",
-										"1",
+										"2",
 										"enderecos",
 										"1"
 									]
@@ -281,14 +299,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "https://cliente-ws-api.herokuapp.com/clientes/1/enderecos/1",
+									"raw": "https://cliente-ws-api.herokuapp.com/clientes/2/enderecos/1",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"clientes",
-										"1",
+										"2",
 										"enderecos",
 										"1"
 									]
@@ -314,10 +334,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/generos",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"generos"
 									]
@@ -332,10 +354,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/generos/1",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"generos",
 										"1"
@@ -362,10 +386,12 @@
 								},
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/generos",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"generos"
 									]
@@ -391,10 +417,12 @@
 								},
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/generos/4",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"generos",
 										"4"
@@ -421,10 +449,12 @@
 								},
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/generos/4",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"generos",
 										"4"
@@ -446,10 +476,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/estados/filtro?size=30",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"estados",
 										"filtro"
@@ -471,10 +503,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/estados/1",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"estados",
 										"1"
@@ -490,10 +524,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/estados/filtro?nome=a&size=30",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"estados",
 										"filtro"
@@ -530,10 +566,12 @@
 								},
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/estados",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"estados"
 									]
@@ -559,10 +597,12 @@
 								},
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/estados/28",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"estados",
 										"28"
@@ -589,10 +629,12 @@
 								},
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/estados/28",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"estados",
 										"28"
@@ -636,10 +678,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/cidades/filtro?size=30",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"cidades",
 										"filtro"
@@ -661,10 +705,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/cidades/filtro?nome=s&size=30",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"cidades",
 										"filtro"
@@ -690,10 +736,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/cidades/filtro?nome=&idEstado=5&size=30",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"cidades",
 										"filtro"
@@ -723,10 +771,12 @@
 								"header": [],
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/cidades/2",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"cidades",
 										"2"
@@ -753,10 +803,12 @@
 								},
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/cidades",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"cidades"
 									]
@@ -782,10 +834,12 @@
 								},
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/cidades/28",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"cidades",
 										"28"
@@ -812,10 +866,12 @@
 								},
 								"url": {
 									"raw": "https://cliente-ws-api.herokuapp.com/cidades/28",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"cliente-ws-api",
+										"herokuapp",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"cidades",
 										"28"
