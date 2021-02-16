@@ -15,7 +15,7 @@ Script de criação: [script_create_database.sql](https://github.com/michelmdes/
 
 Foi criado uma imagem docker da base de dados com a estrutura do banco, bem como uma carga inicial das tabelas auxiliares (gênero, cidade e estado).
 
-Imagem docker da base de dados no Docker Hub: michelmdes/cliente-api-db-pgsql
+Imagem docker da base de dados no Docker Hub: `michelmdes/cliente-api-db-pgsql`
 
 Para alteração da estrutura da base dentro da imagem docker, executar o script [build-db.sh](https://github.com/michelmdes/cliente-api/blob/master/src/main/resources/docker-postgres/build-db.sh).
 
@@ -50,10 +50,10 @@ Link Heroku: https://cliente-ws-api.herokuapp.com/swagger-ui.html#/cliente-resou
 Arquivo postman (v 2.1) com testes para todos os endpoints da API: [cliente-api.postman_collection.json](https://github.com/michelmdes/cliente-api/blob/master/src/main/resources/cliente-api.postman_collection.json)
 
 ## Processo criativo
- - Gerando aplicação com o spring initializr
- - Definindo os domínios da api
+ - Gerando aplicação Spring Boot com o spring initializr
+ - Definindo os domínios da api (Cliente, Genero, Endereço, Cidade e Estado)
  - Criando imagem docker do banco postgres, para ser usado pela aplicação
- - Definindo o DER, criando a estrutura do banco de dados
+ - Definindo o DER, criando a estrutura do banco de dados (Ver tópico **Estrutura de dados**)
  - Mapeando as entidades JPA
  - Criando os Repositories
  - Criando uma camada genérica Services, que aproveita todos os métodos padrões da JpaReposytory, facilitando a criação dos endpoints. (Repare a simplicidade de implementação e abstração dos recursos de Gênero e Estado, por exemplo)
