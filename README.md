@@ -19,7 +19,7 @@ Foi criado uma imagem docker da base de dados com a estrutura do banco, bem como
 
 Imagem docker da base de dados no Docker Hub: `michelmdes/cliente-api-db-pgsql`
 
-Para alteração da estrutura da base dentro da imagem docker, executar o script [build-db.sh](https://github.com/michelmdes/cliente-api/blob/master/src/main/resources/docker-postgres/build-db.sh).
+Para alteração da estrutura da base dentro da imagem docker, entrar na pasta `resources/docker-postgres` executar o script [build-db.sh](https://github.com/michelmdes/cliente-api/blob/master/src/main/resources/docker-postgres/build-db.sh).
 
 ## Iniciar aplicação
 
